@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Playwrite GB S, sans-serif;
+}
+body {
+  margin: 0;
+  font-family: Playwrite GB S, sans-serif;
+  background-color: #697032;
+  background-position: center;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  margin-top: -95px;
+  position: fixed;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px; /* Tersembunyi di luar layar */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  font-size: 36px;
+  margin-left: 15px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  margin-top: 50px;
+  border: none;
+  padding: 10px 15px;
+}
+
+.openbtn:hover {
+  background-color: #575757;
+}
+
+.navbar-links {
+  display: none;
+}
+.navbar-links.active {
+  display: block;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: Playwrite GB S, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.toko {
+  font-size: 32px;
+  font-weight: bold;
+  color: gold;
+  position: relative;
+  margin-right: 100px;
+  list-style: none;
+  text-decoration: none;
+}
+.toko li {
+  margin-left: 20px;
+  margin-right: 5px;
+}
+.toko li a {
+  text-decoration: none;
+  color: gold;
+}
+.menu {
+  width: 65%;
+  display: flex;
+  justify-content: left;
+  margin-left: 20px;
+  list-style: none;
+}
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+.menu li {
+  margin-left: 25px;
+  margin-right: 5px;
+}
+.menu li a {
+  font-size: 19px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.32s ease;
+}
+.menu li a:hover {
+  color: rgb(140, 162, 1);
+}
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+}
+.search form {
+  display: flex;
+  margin: 0;
+}
+.search input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.search input:hover {
+  border: 1px solid #fff;
+}
+.search a {
+  color: white;
+}
+.search a i {
+  transition: all 0.32s ease;
+}
+.search a i:hover {
+  color: rgb(173, 173, 173);
+}
+.cart {
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-left: 40px;
+}
+.cart a {
+  margin-left: 5px;
+  color: white;
+}
+.cart a i {
+  transition: all 0.32s ease;
+}
+.cart a i:hover {
+  color: rgb(173, 173, 173);
+}
+.notif {
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.notif a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 70px;
+}
+.notif a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.notif a:hover::after {
+  transform: scaleX(1);
+}
+
+.Pembuka {
+  font-size: 150%;
+  margin-top: 10%;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
+.Isi {
+  background-color: #a8b356;
+  padding: 50px 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition-duration: 0.2s;
+}
+
+.text p {
+  margin: 20px;
+  color: black;
+}
+
+.text img {
+  margin-left: 150px;
+}
+
+.content {
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+.judul {
+  color: rgb(169, 222, 45);
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+.menu-card h2 {
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+.menu-card p {
+  font-size: 1.2em;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.kotak {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.kotak .FAQ{
+  position: static;
+  margin: 0;
+  padding: 20px;
+}
+
+.kotak .FAQ ul{
+  display: block;
+  justify-content: left;
+  list-style: none;
+}
+
+.kotak .FAQ ul li a{
+  color: rgb(255, 255, 255);
+  margin: -20px;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.5s ease;
+  margin-right: 25px;
+}
+
+.kotak .FAQ ul li a:hover{
+  color: #757575;
+}
+
+.kotak .credit {
+  margin-top: 50px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-more {
+    font-family: google;
+    width: 100px;
+    height: 25px;
+    background-color: black;
+    border-radius: 20px;
+    border: 1.2px solid black;
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.btn-more:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
